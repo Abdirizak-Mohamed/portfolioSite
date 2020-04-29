@@ -16,7 +16,7 @@ class Dashboard extends Component {
               height: "99.9vh",
               alignItems: "center",
               borderRight: "5px solid black",
-              paddingLeft: "2vw",
+              paddingLeft: "3vw",
               minWidth: "3cm"
             }}
             al
