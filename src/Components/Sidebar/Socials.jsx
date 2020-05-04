@@ -7,7 +7,7 @@ class Socials extends Component {
     return (
       <Menu icon vertical inverted>
         <Menu.Item>
-          <Button circular color="github" icon="github" size="mini" />
+          <Button circular inverted icon="github" size="mini" />
         </Menu.Item>
         <Menu.Item>
           <Button circular color="linkedin" icon="linkedin" size="mini" />

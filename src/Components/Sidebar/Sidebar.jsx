@@ -8,7 +8,7 @@ class Sidebar extends Component {
   state = {};
   render() {
     return (
-      <div>
+      <Grid centered>
         <Grid.Row style={{ paddingBottom: "16vh" }}>
           <Image src={logo} size="tiny" />
         </Grid.Row>
@@ -18,7 +18,7 @@ class Sidebar extends Component {
         <Grid.Row>
           <Socials />
         </Grid.Row>
-      </div>
+      </Grid>
     );
   }
 }

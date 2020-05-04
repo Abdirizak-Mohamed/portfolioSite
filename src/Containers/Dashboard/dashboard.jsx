@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import Sidebar from "../../Components/Sidebar/Sidebar";
-import Home from "../Home/Home";
+import DashboardRoutes from "./dashboardroutes";
 
 class Dashboard extends Component {
   state = {};
   render() {
     return (
       <Grid>
-        <Grid.Row columns={2} centered>
+        <Grid.Row columns={2}>
           <Grid.Column
             width={1}
             stretched
@@ -20,15 +20,12 @@ class Dashboard extends Component {
               //paddingLeft: "1.8vw"
               //minWidth: "3cm"
             }}
-            al
           >
             <Sidebar />
           </Grid.Column>
-          <Grid.Column
-            //stretched
-            width={14}
-          >
-            <Home />
+          <Grid.Column stretched width={14}>
+            >
+            <DashboardRoutes />
           </Grid.Column>
         </Grid.Row>
       </Grid>
