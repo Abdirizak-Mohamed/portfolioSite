@@ -63,23 +63,24 @@ class PageMenu extends Component {
             </Reveal.Content>
           </Reveal>
         </Menu.Item>
-
-        <Menu.Item>
-          <Reveal animated="fade">
-            <Reveal.Content visible>
-              <Icon
-                name="archive"
-                size="big"
-                style={{
-                  backgroundColor: "rgb(28, 28, 29)"
-                }}
-              />
-            </Reveal.Content>
-            <Reveal.Content hidden>
-              <Image src={portfolio} size="mini" />
-            </Reveal.Content>
-          </Reveal>
-        </Menu.Item>
+        <Link to="/projects">
+          <Menu.Item>
+            <Reveal animated="fade">
+              <Reveal.Content visible>
+                <Icon
+                  name="archive"
+                  size="big"
+                  style={{
+                    backgroundColor: "rgb(28, 28, 29)"
+                  }}
+                />
+              </Reveal.Content>
+              <Reveal.Content hidden>
+                <Image src={portfolio} size="mini" />
+              </Reveal.Content>
+            </Reveal>
+          </Menu.Item>
+        </Link>
       </Menu>
     );
   }

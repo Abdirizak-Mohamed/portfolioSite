@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Image, Grid } from "semantic-ui-react";
-import AnimatedSquare from "../../Components/animatedSquare";
+import { Grid } from "semantic-ui-react";
 import AnimatedTitle from "../../Components/animatedTitle";
 import SquareContainer from "../../Components/squareContainer";
 class About extends Component {

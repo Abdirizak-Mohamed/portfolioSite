@@ -8,7 +8,7 @@ class Sidebar extends Component {
   state = {};
   render() {
     return (
-      <Grid centered>
+      <Grid centered style={{ paddingLeft: "1vw" }}>
         <Grid.Row style={{ paddingBottom: "16vh" }}>
           <Image src={logo} size="tiny" />
         </Grid.Row>
