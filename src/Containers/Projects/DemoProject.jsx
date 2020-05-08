@@ -1,18 +1,69 @@
 import React, { Component } from "react";
-import { Modal, Image, Header } from "semantic-ui-react";
-import gif from "../../images/kuhabays.gif";
+import { Modal, Image, Header, Button } from "semantic-ui-react";
+import gif from "../../images/KuHabayso.gif";
 
 class DemoProject extends Component {
   state = {};
   render() {
-    const { handleClose, description, name, open } = this.props;
+    const {
+      handleClose,
+      description,
+      name,
+      open,
+      color,
+      demoSize,
+      showButton,
+      sourceCodeLink
+    } = this.props;
+    console.log(this.props);
+    let sourceCode;
+    if (showButton) {
+      sourceCode = (
+        <Button
+          fluid
+          hidden={showButton}
+          as="a"
+          href={`${sourceCodeLink}`}
+          style={{
+            fontFamily: "Montserrat, Work Sans, sans-serif",
+            fontWeight: "bold",
+            letterSpacing: "-0.04em",
+            fontSize: 25,
+            backgroundColor: `${color}`,
+            display: "flex", // Set the display value to flex
+            justifyContent: "center" // Center all children elements on the x axis
+          }}
+        >
+          Source Code
+        </Button>
+      );
+    }
     return (
       <Modal open={open} onClose={handleClose}>
-        <Modal.Header>{name}</Modal.Header>
+        <Modal.Header style={{ backgroundColor: `${color}` }}>
+          {name}
+        </Modal.Header>
         <Modal.Content image>
-          <Image wrapped size="medium" src={gif} />
+          <Image
+            size={`${demoSize}`}
+            src={require(`../../images/${name}.gif`)}
+          />
           <Modal.Description>
-            <p>{description}</p>
+            <p
+              style={{
+                fontFamily: "Montserrat, Work Sans, sans-serif",
+                fontWeight: "bold",
+                letterSpacing: "-0.04em",
+                fontSize: 25,
+                color: `${color}`,
+                display: "flex", // Set the display value to flex
+                justifyContent: "center" // Center all children elements on the x axis
+              }}
+            >
+              {description}
+            </p>
+
+            {sourceCode}
           </Modal.Description>
         </Modal.Content>
       </Modal>

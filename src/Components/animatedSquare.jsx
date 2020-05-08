@@ -24,22 +24,45 @@ class AnimatedSquare extends Component {
     this.mount.appendChild(renderer.domElement);
 
     const loader = new THREE.TextureLoader();
+
     const boxWidth = 3;
     const boxHeight = 3;
     const boxDepth = 3;
+
     const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+    const materials = [
+      new THREE.MeshBasicMaterial({
+        map: loader.load(require("../images/React.png"))
+      }),
+      new THREE.MeshBasicMaterial({
+        map: loader.load(require("../images/HTML5.png"))
+      }),
+      new THREE.MeshBasicMaterial({
+        map: loader.load(require("../images/CSS3.png"))
+      }),
+      new THREE.MeshBasicMaterial({
+        map: loader.load(require("../images/NodeJS.png"))
+      }),
+      new THREE.MeshBasicMaterial({
+        map: loader.load(require("../images/React.png"))
+      }),
+      new THREE.MeshBasicMaterial({
+        map: loader.load(require("../images/React.png"))
+      })
+    ];
+
     const material = new THREE.MeshBasicMaterial({
-      map: loader.load(
-        "https://threejsfundamentals.org/threejs/resources/images/wall.jpg"
-      )
+      map: loader.load(require("../images/HTML5.png"))
     });
-    var pyramid = new THREE.Mesh(geometry, material);
-    scene.add(pyramid);
+
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
     camera.position.z = 5;
     var animate = function() {
       requestAnimationFrame(animate);
-      pyramid.rotation.x += 0.01;
-      pyramid.rotation.y += 0.01;
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
       renderer.render(scene, camera);
     };
     animate();

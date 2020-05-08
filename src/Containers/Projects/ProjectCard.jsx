@@ -1,17 +1,25 @@
 import React, { Component } from "react";
-import { Grid, Card, List, Image, Reveal, Button } from "semantic-ui-react";
+import { Grid, Card, List, Image, Button } from "semantic-ui-react";
 import html from "../../images/KuhabaysoLogo.png";
+import DemoProject from "./DemoProject";
 
 class ProjectCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
+      name: "",
+      description: "",
+      gif: ""
     };
   }
 
   handleClick() {
     this.setState({ showModal: true });
+  }
+  handleClose() {
+    console.log("hi");
+    this.setState({ showModal: false });
   }
 
   render() {
@@ -21,11 +29,25 @@ class ProjectCard extends Component {
       type,
       technologies,
       backgroundColor,
-      description
+      description,
+      showButton,
+      size,
+      sourceCode
     } = this.props.project;
+    const { showModal } = this.state;
 
     return (
       <Grid.Column centered>
+        <DemoProject
+          open={showModal}
+          handleClose={() => this.handleClose()}
+          description={description}
+          name={name}
+          color={backgroundColor}
+          showButton={showButton}
+          demoSize={size}
+          sourceCodeLink={sourceCode}
+        />
         <Card>
           <Image src={require(`../../images/${imageName}`)} />
           <Card.Content>
