@@ -7,7 +7,7 @@ const Cards = [
     backgroundColor: "#2b97d4",
     imageName: "KuhabaysoLogo.png",
     description:
-      "Kuhabayso is a cross-platform desktop application. It was created to resolve a clients document archiving needs. It allows users to create accounts and upload and retrieve files. "
+      "Kuhabayso is a cross-platform desktop application. It was created to resolve a client's document archiving needs. It allows users to securely create accounts, upload and retrieve files "
   },
   {
     name: "SomCorona",
@@ -17,7 +17,7 @@ const Cards = [
     backgroundColor: "#343953",
     imageName: "SomCorona.png",
     description:
-      " SomCorona is a cross-platform Mobile application. It was created to allow health care proffesionals to rapidly report new cases of the novel CoronaVirus."
+      " SomCorona is a cross-platform Mobile application. It was created to allow health care professionals to rapidly report new cases of the novel CoronaVirus."
   },
   {
     name: "Abdi'sFinance",
@@ -38,8 +38,10 @@ const Cards = [
     technologies: ["JavaScript", "React", "HTML", "CSS"],
     backgroundColor: "#5a5a5a",
     imageName: "pathway.png",
+    sourceCode:
+      "https://github.com/Abdirizak-Mohamed/jslearn/tree/master/jslearn",
     description:
-      "PathFinderzz is a web application. It was created using the react frontend framework and allows users to visualise differen pathfinding algorithms.",
+      "PathFinderzz is a web application. It was created using the React frontend framework and allows users to visualise different pathfinding algorithms.",
     showButton: true
   }
 ];

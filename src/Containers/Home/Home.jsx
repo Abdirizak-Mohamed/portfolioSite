@@ -7,7 +7,32 @@ class Home extends Component {
   render() {
     return (
       <Grid style={{ height: "100vh" }}>
-        <Grid.Row columns={2} verticalAlign="middle">
+        <Grid.Row
+          columns={1}
+          only="mobile"
+          centered
+          style={{ height: "100vh" }}
+        >
+          <Grid.Column style={{ paddingTop: "25vh" }}>
+            <AnimatedTitle
+              words="Hi,                        "
+              titleColor="#fff"
+              textSize={53}
+            />
+            <AnimatedTitle
+              words="I'm Abdirizak,    "
+              titleColor="#fff"
+              textSize={53}
+            />
+            <AnimatedTitle
+              words="Web Developer."
+              titleColor="#fff"
+              textSize={53}
+            />
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row columns={2} verticalAlign="middle" only="large screen">
           <Grid.Column>
             <AnimatedTitle
               words="Hi,                        "

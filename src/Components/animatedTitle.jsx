@@ -6,9 +6,14 @@ class AnimatedTitle extends Component {
   state = {};
 
   render() {
-    console.log(this.props);
     const string = Array.from(this.props.words);
-    const { titleColor } = this.props;
+    const { titleColor, textSize } = this.props;
+    let size;
+    if (textSize) {
+      size = textSize;
+    } else {
+      size = 60;
+    }
     // Add staggering effect to the children of the container
     const containerVariants = {
       before: {},
@@ -49,7 +54,7 @@ class AnimatedTitle extends Component {
               fontFamily: "Montserrat, Work Sans, sans-serif",
               fontWeight: "bold",
               letterSpacing: "-0.04em",
-              fontSize: 60,
+              fontSize: size,
               color: titleColor,
               display: "flex", // Set the display value to flex
               justifyContent: "center" // Center all children elements on the x axis

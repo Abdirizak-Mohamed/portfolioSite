@@ -9,10 +9,10 @@ class Sidebar extends Component {
   render() {
     return (
       <Grid centered style={{ paddingLeft: "1vw" }}>
-        <Grid.Row style={{ paddingBottom: "16vh" }}>
+        <Grid.Row style={{ paddingBottom: "20vh" }}>
           <Image src={logo} size="tiny" />
         </Grid.Row>
-        <Grid.Row style={{ paddingBottom: "18vh" }}>
+        <Grid.Row style={{ paddingBottom: "22vh" }}>
           <PageMenu />
         </Grid.Row>
         <Grid.Row>

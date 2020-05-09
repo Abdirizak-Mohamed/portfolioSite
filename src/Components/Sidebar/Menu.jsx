@@ -47,7 +47,7 @@ class PageMenu extends Component {
             </Reveal>
           </Menu.Item>
         </Link>
-        <Menu.Item>
+        {/* <Menu.Item>
           <Reveal animated="fade">
             <Reveal.Content visible>
               <Icon
@@ -62,7 +62,7 @@ class PageMenu extends Component {
               <Image src={skills} size="mini" />
             </Reveal.Content>
           </Reveal>
-        </Menu.Item>
+              </Menu.Item>*/}
         <Link to="/projects">
           <Menu.Item>
             <Reveal animated="fade">

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Grid, Card, List, Image, Button } from "semantic-ui-react";
-import html from "../../images/KuhabaysoLogo.png";
 import DemoProject from "./DemoProject";
 
 class ProjectCard extends Component {
@@ -18,7 +17,6 @@ class ProjectCard extends Component {
     this.setState({ showModal: true });
   }
   handleClose() {
-    console.log("hi");
     this.setState({ showModal: false });
   }
 
@@ -54,15 +52,15 @@ class ProjectCard extends Component {
             <Card.Header>{name}</Card.Header>
           </Card.Content>
           <Card.Content>
-            <List divided relaxed centered>
+            <List divided relaxed>
               <List.Item>
                 <List.Content>
                   <List.Header>{type}</List.Header>
                 </List.Content>
               </List.Item>
-              {technologies.map(tech => {
+              {technologies.map((tech, idx) => {
                 return (
-                  <List.Item>
+                  <List.Item key={idx}>
                     <List.Content>{tech}</List.Content>
                   </List.Item>
                 );

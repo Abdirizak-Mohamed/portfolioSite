@@ -15,7 +15,6 @@ class DemoProject extends Component {
       showButton,
       sourceCodeLink
     } = this.props;
-    console.log(this.props);
     let sourceCode;
     if (showButton) {
       sourceCode = (

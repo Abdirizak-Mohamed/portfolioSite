@@ -23,40 +23,16 @@ class AnimatedSquare extends Component {
     // use ref as a mount point of the Three.js scene instead of the document.body
     this.mount.appendChild(renderer.domElement);
 
-    const loader = new THREE.TextureLoader();
-
     const boxWidth = 3;
     const boxHeight = 3;
     const boxDepth = 3;
 
     const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
-
-    const materials = [
-      new THREE.MeshBasicMaterial({
-        map: loader.load(require("../images/React.png"))
-      }),
-      new THREE.MeshBasicMaterial({
-        map: loader.load(require("../images/HTML5.png"))
-      }),
-      new THREE.MeshBasicMaterial({
-        map: loader.load(require("../images/CSS3.png"))
-      }),
-      new THREE.MeshBasicMaterial({
-        map: loader.load(require("../images/NodeJS.png"))
-      }),
-      new THREE.MeshBasicMaterial({
-        map: loader.load(require("../images/React.png"))
-      }),
-      new THREE.MeshBasicMaterial({
-        map: loader.load(require("../images/React.png"))
-      })
-    ];
-
-    const material = new THREE.MeshBasicMaterial({
-      map: loader.load(require("../images/HTML5.png"))
+    const materials = new THREE.MeshBasicMaterial({
+      map: new THREE.TextureLoader().load(require("../images/JS.png"))
     });
 
-    const cube = new THREE.Mesh(geometry, material);
+    const cube = new THREE.Mesh(geometry, materials);
     scene.add(cube);
     camera.position.z = 5;
     var animate = function() {
