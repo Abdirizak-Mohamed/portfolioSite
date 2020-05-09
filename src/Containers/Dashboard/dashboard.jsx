@@ -9,7 +9,7 @@ class Dashboard extends Component {
   render() {
     return (
       <Grid verticalAlign="middle">
-        <Grid.Row columns={1} only="mobile">
+        <Grid.Row columns={1} only="mobile tablet">
           <Grid.Column>
             <NavBar />
             <DashboardRoutes />

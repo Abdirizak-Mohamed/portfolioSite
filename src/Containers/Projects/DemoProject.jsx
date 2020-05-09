@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Modal, Image, Header, Button } from "semantic-ui-react";
-import gif from "../../images/KuHabayso.gif";
+import { Modal, Image, Button } from "semantic-ui-react";
 
 class DemoProject extends Component {
   state = {};

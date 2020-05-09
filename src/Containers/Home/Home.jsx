@@ -9,7 +9,7 @@ class Home extends Component {
       <Grid style={{ height: "100vh" }}>
         <Grid.Row
           columns={1}
-          only="mobile"
+          only="mobile tablet"
           centered
           style={{ height: "100vh" }}
         >

@@ -10,7 +10,7 @@ class Projects extends Component {
     return (
       <Grid stackable style={{ paddingLeft: "10vw", paddingTop: "2vw" }}>
         <Grid.Row
-          only="mobile"
+          only="mobile tablet"
           style={{
             paddingBottom: "4vh",
             paddingLeft: "1vw",
@@ -22,7 +22,7 @@ class Projects extends Component {
 
         {projectInfo.map(project => {
           return (
-            <Grid.Row centered only="mobile" columns={1}>
+            <Grid.Row centered only="mobile tablet" columns={1}>
               <ProjectCard project={project} key={project.name} />
             </Grid.Row>
           );

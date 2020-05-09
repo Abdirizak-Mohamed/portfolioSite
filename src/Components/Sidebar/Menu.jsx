@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, Icon, Reveal, Image } from "semantic-ui-react";
 import about from "../../images/About.png";
 import home from "../../images/Home.png";
-import skills from "../../images/Skills.png";
+//import skills from "../../images/Skills.png";
 import portfolio from "../../images/Portfolio.png";
 
 class PageMenu extends Component {
